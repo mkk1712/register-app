@@ -1,6 +1,9 @@
 pipeline {
+    agent any
+    stages {
         stage("Checkout from SCM"){
                 steps {
+		    echo 'checking out code from Git...'	
                     git branch: 'main', credentialsId: 'github', url: 'https://github.com/mkk1712/register-app/'
                 }
         }

@@ -4,7 +4,7 @@ pipeline {
         stage("Checkout from SCM"){
                 steps {
 		    echo 'checking out code from Git...'	
-                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/mkk1712/register-app/'
+                    git branch: 'main', url: 'https://github.com/mkk1712/register-app'
                 }
         }
 
